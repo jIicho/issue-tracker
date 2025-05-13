@@ -1,0 +1,19 @@
+.issueViewControls {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--neutral-surface-default);
+  padding: 0 32px;
+  align-items: center;
+}
+
+.checkbox {
+  width: 16px;
+  height: 16px;
+  background-image: url("../../assets/icons/checkBoxInitial.svg");
+}
+
+.issueTabs {
+  display: flex;
+  gap: 24px;
+  padding-left: 32px;
+}

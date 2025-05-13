@@ -4,7 +4,7 @@ import "../../styles/tokens.css";
 import { API_URL } from "../../constants/link";
 
 import IssueList from "./IssueList";
-import IssueTabs from "./issueTabs";
+import TableHeader from "./TableHeader";
 
 function IssueTable() {
   const [isOpen, setIsOpen] = useState(true);
@@ -23,11 +23,13 @@ function IssueTable() {
 
   return (
     <div className={styles.issueTableContainer}>
-      <IssueTabs
-        isOpen={isOpen}
-        setIsOpen={setIsOpen}
-        issueCount={issueCount}
-      />
+      <div className={styles.tableHeader}>
+        <TableHeader
+          isOpen={isOpen}
+          setIsOpen={setIsOpen}
+          issueCount={issueCount}
+        />
+      </div>
       <div className={styles.issueListContainer}>
         <IssueList isOpen={isOpen} />
       </div>
